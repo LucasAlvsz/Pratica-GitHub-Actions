@@ -1,20 +1,20 @@
 services:
-  database_gitHub-ci:
+  database_github-ci:
     image: postgres
-    container_name: database_gitHub-ci
+    container_name: database_github-ci
     restart: always
     ports:
       - "1234:5432"
     env_file:
       - .env.test
 
-  node_gitHub-ci:
-    container_name: node_gitHub-ci
+  node_github-ci:
+    container_name: node_github-ci
     build: .
     ports:
       - 5000:5000
     depends_on:
-      - database_gitHub-ci
+      - database_github-ci
     env_file:
       - .env.test
 
