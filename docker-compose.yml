@@ -1,3 +1,4 @@
+version: "3"
 services:
   database_github-ci:
     image: postgres
@@ -20,5 +21,5 @@ services:
     env_file:
       - .env
 
-  volumes:
-    pg_github-ci:
+volumes:
+  pg_github-ci:

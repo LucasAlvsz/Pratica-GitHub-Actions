@@ -2,10 +2,10 @@ FROM node
 
 WORKDIR /usr/src/
 
-COPY . .
+COPY . . 
 
 EXPOSE 5000
 
-RUN npm install
+RUN npm i 
 
 CMD ["npm", "start"]
